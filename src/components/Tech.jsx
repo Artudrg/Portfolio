@@ -2,15 +2,11 @@ import { BiLogoBootstrap, BiLogoCss3, BiLogoHtml5, BiLogoJavascript, BiLogoMongo
 import { SiMysql } from "react-icons/si";
 import {motion} from 'framer-motion'
 
-
 function Tech() {
-
   const variants = {
     hidden:{opacity:0, y:50},
     visible:{opacity:1, y:0}
   }
-
-
 
   return (
     <div id="tech" className="flex min-h-[70h] w-full flex-col items-center justify-center gap-16">
@@ -19,9 +15,8 @@ function Tech() {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}
-
-      className="text-2xl font-light text-white md:text-5xl">
-        Technologies
+        className="text-2xl font-light text-white md:text-5xl">
+        Tecnologías
       </motion.h1>
       <div className="flex flex-wrap items-center justify-center gap-10 p-5">
         <motion.div 

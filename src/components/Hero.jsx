@@ -23,8 +23,8 @@ function Hero() {
         
         className='flex max-w-[700px] flex-col items-center justify-center gap-3 text-center'>
           <h1 className='bg-clip-text text-2xl font-light md:text-6xl'>Arturo Romero</h1>
-          <h3 className='bg-clip-text text-xl font-light md:text-4xl'>Web Developer</h3>
-          <p className='md:text-md text-pretty text-lg text-gray-400'>I'm a Full Stack MERN developer with a passion for creating clean, scalable applications. Currently, I'm pursuing a degree in Computer Science Engineering.</p>
+          <h3 className='bg-clip-text text-xl font-light md:text-4xl'>Desarrollador Web</h3>
+          <p className='md:text-md text-pretty text-lg text-gray-400'>Soy un desarrollador Full Stack MERN con pasión por crear aplicaciones limpias y escalables. Actualmente, estoy cursando Ingeniería en Informática.</p>
         </motion.div>
       </div>
     </div>

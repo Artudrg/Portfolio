@@ -33,34 +33,32 @@ function Navbar() {
         />
       </a>
 
-
       <ul className="hidden gap-10 md:flex">
         <a
           href="#home"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
-          <li>Home</li>
+          <li>Inicio</li>
         </a>
         <a
           href="#tech"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
-          <li>Tech</li>
+          <li>Tecnologías</li>
         </a>
         <a
           href="#projects"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
-          <li>Projects</li>
+          <li>Proyectos</li>
         </a>
         <a
           href="#contact"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
-          <li>Contact</li>
+          <li>Contacto</li>
         </a>
       </ul>
-
 
       <ul className="hidden gap-10 md:flex">
         <a
@@ -104,28 +102,26 @@ function Navbar() {
           <a
             href="#home"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
-
           >
-            <li>Home</li>
+            <li>Inicio</li>
           </a>
           <a
             href="#tech"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
-
           >
-            <li>Tech</li>
+            <li>Tecnologías</li>
           </a>
           <a
             href="#projects"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
           >
-            <li>Projects</li>
+            <li>Proyectos</li>
           </a>
           <a
             href="#contact"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
           >
-            <li>Contact</li>
+            <li>Contacto</li>
           </a>
         </ul>
 
