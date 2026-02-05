@@ -4,7 +4,7 @@ import { BiMenu, BiX } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import Firma from '../img/firma.png';
 
-function Navbar() {
+function Navbar({ onResetPath }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
@@ -60,28 +60,36 @@ function Navbar() {
         </a>
       </ul>
 
-      <ul className="hidden gap-10 md:flex">
-        <a
-          href="https://www.linkedin.com/in/artudrg/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100"
+      <div className="hidden gap-10 md:flex items-center">
+        <ul className="flex gap-10">
+          <a
+            href="https://www.linkedin.com/in/artudrg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100"
+          >
+            <li>
+              <BsLinkedin />
+            </li>
+          </a>
+          <a
+            href="https://github.com/artudrg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-gray-600 hover:opacity-100"
+          >
+            <li>
+              <BsGithub />
+            </li>
+          </a>
+        </ul>
+        <button
+          onClick={onResetPath}
+          className="rounded-md bg-gray-700/60 px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600/80"
         >
-          <li>
-            <BsLinkedin />
-          </li>
-        </a>
-        <a
-          href="https://github.com/artudrg/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-gray-600 hover:opacity-100"
-        >
-          <li>
-            <BsGithub />
-          </li>
-        </a>
-      </ul>
+          Cambiar ruta
+        </button>
+      </div>
 
       {isOpen ? (
         <BiX
@@ -123,9 +131,15 @@ function Navbar() {
           >
             <li>Contacto</li>
           </a>
+          <button
+            onClick={onResetPath}
+            className="rounded-md bg-gray-700/60 px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600/80 hover:-translate-y-1"
+          >
+            Cambiar ruta
+          </button>
         </ul>
 
-        <ul className="hidden gap-10 md:flex">
+        <ul className="flex gap-10">
           <a
             href="https://www.linkedin.com/in/artudrg/"
             target="_blank"
