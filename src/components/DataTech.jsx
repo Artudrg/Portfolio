@@ -1,5 +1,4 @@
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiMysql, SiSqlite } from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di"; 
 import { motion } from "framer-motion";
 import PowerBiIcon from "../img/powerbi.svg";
 import PythonIcon from "../img/python.svg";
@@ -12,8 +11,8 @@ function DataTech() {
 
   return (
     <div
-      id="data-tech"
-      className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-16"
+      id="tech"
+      className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-16"
     >
       <motion.h1
         variants={variants}
@@ -22,9 +21,12 @@ function DataTech() {
         transition={{ duration: 0.5 }}
         className="text-2xl font-light text-white md:text-5xl"
       >
-        Herramientas y Tecnologías
+        Tecnologías Principales
       </motion.h1>
-      <div className="flex flex-wrap items-center justify-center gap-10 p-5">
+
+      <div className="flex flex-wrap items-center justify-center gap-16 p-5">
+        
+        {/* Python */}
         <motion.div
           variants={variants}
           initial="hidden"
@@ -34,17 +36,24 @@ function DataTech() {
           <img
             src={PythonIcon}
             alt="Python"
-            className="cursor-pointer w-[80px] transition-all duration-300 hover:-translate-y-2 md:w-[100px]"
+            className="cursor-pointer w-[90px] transition-all duration-300 hover:-translate-y-2 md:w-[120px]"
           />
         </motion.div>
+
+        {/* SQL Server */}
         <motion.div
           variants={variants}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.5 }}
         >
-          <SiSqlite className="cursor-pointer text-[80px] text-blue-400 transition-all duration-300 hover:-translate-y-2 md:text-[100px]" />
+          <div className="flex flex-col items-center gap-2">
+            <DiMsqlServer className="cursor-pointer text-[90px] text-red-600 transition-all duration-300 hover:-translate-y-2 md:text-[120px]" />
+            <span className="text-sm text-gray-400 font-mono">SQL Server</span>
+          </div>
         </motion.div>
+
+        {/* Power BI */}
         <motion.div
           variants={variants}
           initial="hidden"
@@ -54,25 +63,10 @@ function DataTech() {
           <img
             src={PowerBiIcon}
             alt="Power BI"
-            className="cursor-pointer w-[80px] transition-all duration-300 hover:-translate-y-2 md:w-[100px]"
+            className="cursor-pointer w-[90px] transition-all duration-300 hover:-translate-y-2 md:w-[120px]"
           />
         </motion.div>
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoPostgresql className="cursor-pointer text-[80px] text-blue-600 transition-all duration-300 hover:-translate-y-2 md:text-[100px]" />
-        </motion.div>
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <SiMysql className="cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-2 md:text-[100px]" />
-        </motion.div>
+
       </div>
     </div>
   );

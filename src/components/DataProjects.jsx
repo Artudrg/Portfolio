@@ -2,18 +2,25 @@ import {motion} from 'framer-motion'
 
 const dataProjectsData = [
   {
-    title: "Proyecto 1",
+    title: "Análisis de Embudo y Retención",
     description:
-      "Descripción del proyecto de análisis de datos",
-    technologies: ["Python", "Tableau"],
-    link: '#'
+      "Modelado de funnels de conversión y análisis de cohortes en SQL Server para medir el comportamiento del usuario y el Customer Lifetime Value (CLV).",
+    technologies: ["SQL Server", "Product Analytics"],
+    link: 'https://github.com/Artudrg/An-lisis-de-Embudo-de-Conversi-n-y-Retenci-n'
   },
   {
-    title: "Proyecto 2",
+    title: "Limpieza y Estandarización ETL",
     description:
-      "Descripción del proyecto de análisis de datos",
-    technologies: ["Power BI", "SQL"],
-    link: '#'
+      "Proceso ETL para normalizar datos de clientes, eliminando duplicados y estandarizando formatos mediante funciones personalizadas y lógica condicional.",
+    technologies: ["SQL Server", "Data Cleaning"],
+    link: 'https://github.com/Artudrg/Limpieza-y-Estandarizaci-n-de-Datos-de-Clientes'
+  },
+  {
+    title: "Tendencias de Gasto y Variación YoY",
+    description:
+      "Análisis financiero interanual utilizando Window Functions para calcular el crecimiento de gasto y detectar patrones estacionales por categoría.",
+    technologies: ["SQL Server", "Financial Analysis"],
+    link: 'https://github.com/Artudrg/Tendencias-de-Gasto-y-Variaci-n-Interanual'
   },
 ];
 
@@ -70,7 +77,7 @@ const ProjectCard = ({ project }) => {
 
 function DataProjects() {
   return (
-    <div id='data-projects' className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24'>
+    <div id='projects' className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24'>
       <ScrollReveal>
       <h1 className='text-2xl font-light text-white md:text-5xl'>Proyectos de Análisis de Datos</h1>
       </ScrollReveal>
