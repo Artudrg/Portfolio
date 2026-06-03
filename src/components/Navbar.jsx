@@ -4,7 +4,7 @@ import { BiMenu, BiX } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 import Firma from '../img/firma.png';
 
-function Navbar({ onResetPath }) {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuVariants = {
@@ -22,10 +22,7 @@ function Navbar({ onResetPath }) {
 
   return (
     <nav className="fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-900 bg-black/70 px-16 py-6 text-white backdrop:blur-md md:justify-evenly">
-      <a
-        href="#home"
-        className="flex items-center justify-center"
-      >
+      <a href="#home" className="flex items-center justify-center">
         <img
           src={Firma}
           alt="Firma"
@@ -40,18 +37,21 @@ function Navbar({ onResetPath }) {
         >
           <li>Inicio</li>
         </a>
+
         <a
           href="#tech"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
           <li>Tecnologías</li>
         </a>
+
         <a
           href="#projects"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
           <li>Proyectos</li>
         </a>
+
         <a
           href="#contact"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
@@ -72,6 +72,7 @@ function Navbar({ onResetPath }) {
               <BsLinkedin />
             </li>
           </a>
+
           <a
             href="https://github.com/artudrg/"
             target="_blank"
@@ -83,12 +84,6 @@ function Navbar({ onResetPath }) {
             </li>
           </a>
         </ul>
-        <button
-          onClick={onResetPath}
-          className="rounded-md bg-gray-700/60 px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600/80"
-        >
-          Cambiar ruta
-        </button>
       </div>
 
       {isOpen ? (
@@ -97,11 +92,14 @@ function Navbar({ onResetPath }) {
           onClick={() => setIsOpen(false)}
         />
       ) : (
-        <BiMenu className="block text-4xl md:hidden" onClick={() => setIsOpen(true)} />
+        <BiMenu
+          className="block text-4xl md:hidden"
+          onClick={() => setIsOpen(true)}
+        />
       )}
 
       <motion.div
-        className="fixed right-0 top-[88px] h-screen w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black/90 p-12 md:hidden"
+        className="fixed right-0 top-[88px] h-screen w-1/2 flex-col items-start justify-start gap-10 border border-gray-800 bg-black/90 p-12 md:hidden"
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         variants={menuVariants}
@@ -110,36 +108,37 @@ function Navbar({ onResetPath }) {
           <a
             href="#home"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            onClick={() => setIsOpen(false)}
           >
             <li>Inicio</li>
           </a>
+
           <a
             href="#tech"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            onClick={() => setIsOpen(false)}
           >
             <li>Tecnologías</li>
           </a>
+
           <a
             href="#projects"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            onClick={() => setIsOpen(false)}
           >
             <li>Proyectos</li>
           </a>
+
           <a
             href="#contact"
             className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+            onClick={() => setIsOpen(false)}
           >
             <li>Contacto</li>
           </a>
-          <button
-            onClick={onResetPath}
-            className="rounded-md bg-gray-700/60 px-4 py-2 text-sm transition-all duration-300 hover:bg-gray-600/80 hover:-translate-y-1"
-          >
-            Cambiar ruta
-          </button>
         </ul>
 
-        <ul className="flex gap-10">
+        <ul className="mt-10 flex gap-10">
           <a
             href="https://www.linkedin.com/in/artudrg/"
             target="_blank"
@@ -150,6 +149,7 @@ function Navbar({ onResetPath }) {
               <BsLinkedin />
             </li>
           </a>
+
           <a
             href="https://github.com/artudrg/"
             target="_blank"
